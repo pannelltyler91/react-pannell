@@ -3,6 +3,7 @@ import Merch2 from './images/kaisen.jpg';
 import Merch3 from './images/tanjiro.jpg';
 import Merch4 from './images/saitama.jpg';
 import Merch5 from './images/psycho.jpg';
+import {ADD_TO_CART} from '../actions/cartactions';
 
 const initState ={
     items:[
@@ -18,7 +19,27 @@ const initState ={
 }
 
 const cartReducer = (state = initState,action) => {
-    return state;
+    if(action.type === ADD_TO_CART){
+        let addedItem = state.items.find(item => item.id === action.id)
+        let existingItem = state.addedItems.find(item => action.id === item.id)
+        if (existingItem){
+            addedItem.quantity += 1
+            return{
+                ...state,
+                total: state.total + addedItem.price
+            }
+        } else{
+            addedItem.quantity = 1;
+            let NewTotal = state.total = addedItem.price
+            return{
+                ...state,
+                addedItems:[...state.addedItems, addedItem],
+                total:NewTotal
+            }
+        }
+    } else{
+        return state
+    }
 }
 
 export default cartReducer;
