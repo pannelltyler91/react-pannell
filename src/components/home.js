@@ -1,5 +1,6 @@
 import {Component} from 'react';
 import {connect} from 'react-redux';
+import {NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -15,9 +16,10 @@ class Home extends Component{
     }
     render(){
         let itemList = this.props.items.map(item => {
+            
             return(
                 <div>
-                    <Col m={3}> 
+                    <Col s={3}> 
                     <Card style={{ width: '18rem' }}>
                         <Card.Img className='merchPic' variant="top" src={item.image} />
                         <Card.Body>
@@ -25,7 +27,7 @@ class Home extends Component{
                             <Card.Text>
                             {item.description}
                             <br></br>
-                            {item.price}
+                            ${item.price}
                             </Card.Text>
                             <Button variant="primary" to="/" onClick={()=> {this.handleClick(item.id)}}>Add to Cart</Button>
                         </Card.Body>
@@ -37,12 +39,13 @@ class Home extends Component{
         })
         return(
             <div className='container'>
-                <h1>Home</h1>
+                <h1>All Items</h1>
                 <div className='box'>
                     <Container>
                     <Row>
                     {itemList}
                     </Row>
+                    <NavLink to='/cart' style={{backgroundColor:'cyan'}}>Go to Cart</NavLink>
                     </Container>
                 </div>
             </div>
