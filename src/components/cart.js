@@ -6,9 +6,11 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
 import {removeItem} from '../reducers/actions/cartactions.js';
 import {addQuantity} from '../reducers/actions/cartactions.js';
 import {subtractQuantity} from '../reducers/actions/cartactions.js';
+import './css/cart.css';
 
 class Cart extends Component{
 
@@ -27,15 +29,20 @@ class Cart extends Component{
         this.props.items.map(item =>{
             return(
           
-                    <Col s={3}>
+                    <Col s={3} m={6}>
+                    <Card className='card' style={{ width: '18rem' }}>
+
                     <div className='lineItem'>
-                        <img src={item.image} alt={item.image}></img>
+                    <Card.Img className='merchPic' variant="top" src={item.image} />
                         <div className='lineBody'>
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                            <h3>Price:${item.price}</h3>
-                            <h3>Quantity:{item.quantity}</h3>
+                        <Card.Title>{item.title}</Card.Title>
+                        <Card.Text>
+                            {item.description}
                             <br></br>
+                            ${item.price}
+                            <br></br>
+                            {item.quantity}
+                            </Card.Text>
                         </div>
                         <div className='itemQuantityModify'>
                             <Link to='/cart'><Button className='plusOne' onClick={()=>{this.handleAddQuantity(item.id)}}>+</Button></Link>
@@ -45,6 +52,7 @@ class Cart extends Component{
                         <Button className='removeItem' onClick = {() => {this.handleRemove(item.id)}}>Remove</Button>
 
                     </div>
+                    </Card>
                     </Col>
                    
                
@@ -56,11 +64,11 @@ class Cart extends Component{
             <Container >
                 <h1>Cart</h1>
                 <ul>
-                    <Row>
+                   <Row>
                     {addedItems}
-                    </Row>
+                   </Row> 
                 </ul>  
-                <h3>Total:${this.props.total}</h3>
+                <h3 className='total'>Total:${this.props.total}</h3>
             </Container>
         )
     }

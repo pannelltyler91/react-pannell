@@ -1,0 +1,14 @@
+img.card-mig-top.merchPic{
+    height:300px;
+    width:286px;
+   
+}
+.card{
+    background-color: #00203FFF;
+    color:#ADEFD1FF;
+    margin:3px;
+}
+
+.total{
+  color:#00203FFF;
+}

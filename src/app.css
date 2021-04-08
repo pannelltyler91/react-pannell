@@ -1,0 +1,16 @@
+.header{
+    background-color: #00203FFF;
+    color:#ADEFD1FF;
+    display:flex;
+    align-items: center;
+    
+}
+
+.App{
+    background-color:#ADEFD1FF;
+    color:#00203FFF;
+    background-attachment:fixed;
+}
+.row{
+    background-color:#ADEFD1FF;
+}

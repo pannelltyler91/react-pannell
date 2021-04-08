@@ -1,0 +1,17 @@
+.card{
+    background-color: #00203FFF;
+    color:#ADEFD1FF;
+    margin:3px;
+}
+.card button{
+    background-color:#ADEFD1FF;
+    color:#00203FFF;
+}
+img.card-img-top.merchPic{
+    height:300px;
+    width:286px;
+}
+h3{
+    display:flex;
+    align-items:center;
+}

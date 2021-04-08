@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import {ADD_TO_CART} from '../reducers/actions/cartactions.js';
+import './css/home.css';
 
 class Home extends Component{
     handleClick = (id) =>{
@@ -20,7 +21,7 @@ class Home extends Component{
             return(
                 <div>
                     <Col s={3}> 
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{ width: '18rem' }} className='card'>
                         <Card.Img className='merchPic' variant="top" src={item.image} />
                         <Card.Body>
                             <Card.Title>{item.title}</Card.Title>
@@ -29,7 +30,7 @@ class Home extends Component{
                             <br></br>
                             ${item.price}
                             </Card.Text>
-                            <Button variant="primary" to="/" onClick={()=> {this.handleClick(item.id)}}>Add to Cart</Button>
+                            <Button to="/" onClick={()=> {this.handleClick(item.id)}}>Add to Cart</Button>
                         </Card.Body>
                     </Card>
                     </Col>
@@ -39,13 +40,12 @@ class Home extends Component{
         })
         return(
             <div className='container'>
-                <h1>All Items</h1>
+                
                 <div className='box'>
                     <Container>
-                    <Row>
-                    {itemList}
-                    </Row>
-                    <NavLink to='/cart' style={{backgroundColor:'cyan'}}>Go to Cart</NavLink>
+                        <Row>
+                            {itemList}
+                        </Row>
                     </Container>
                 </div>
             </div>

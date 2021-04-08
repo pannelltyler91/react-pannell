@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+
 import cartReducer from '../reducers/cart/cartReducer';
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -11,6 +11,7 @@ import Deciduous from '../components/deciduous';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import './css/link.css';
 
 
 
@@ -21,12 +22,12 @@ class Navagation extends Component{
         return(
             <div>
 
-                <Navbar bg="primary" variant="dark" expand="lg">
+                <Navbar  variant="dark" expand="lg" className='navbar'>
                     <Navbar.Brand href="#home">T_t_T</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <NavDropdown title="Shop" id="basic-nav-dropdown">
+                        <NavDropdown title="Shop" className="basic-nav-dropdown">
                             <NavLink to='/home' ><NavDropdown.Item href='/home' >All</NavDropdown.Item></NavLink>
                             <NavLink to='/deciduous'  ><NavDropdown.Item href='/deciduous' >Deciduous</NavDropdown.Item></NavLink>
                             <NavLink to='/blevergreens' ><NavDropdown.Item href='/blevergreens' >Broadleaf Evergreens</NavDropdown.Item></NavLink>

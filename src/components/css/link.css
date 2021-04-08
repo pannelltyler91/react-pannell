@@ -1,0 +1,15 @@
+.navbar{
+    background-color: #00203FFF;
+    color:#101820FF;
+}
+
+.basic-nav-dropdown{
+    color:#101820FF;
+}
+div.dropdown-menu.show{
+    background-color: #ADEFD1FF;
+}
+
+a.navbar{
+    color:#101820FF;
+}
