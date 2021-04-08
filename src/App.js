@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Contact from './components/contact';
-import Home from './components/home';
 import '../src/app.css';
 
 

@@ -1,6 +1,5 @@
 import {Component} from 'react';
 import {connect} from 'react-redux';
-import {NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
