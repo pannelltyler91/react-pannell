@@ -15,7 +15,7 @@ class Deciduous extends Component{
         console.log('clicked');
     }
     render(){
-        let itemList = this.props.items.forEach(item => {
+        let itemList = this.props.items.map(item => {
             if(item.id >= 1 && item.id <=3){
                 return(
                     <div>
@@ -38,7 +38,7 @@ class Deciduous extends Component{
                 )
 
             }
-            return
+            return this.state
         })
         return(
             

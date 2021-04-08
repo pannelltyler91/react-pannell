@@ -15,7 +15,8 @@ class Conifers extends Component{
         console.log('clicked');
     }
     render(){
-        let itemList = this.props.items.forEach(item => {
+
+        let itemList = this.props.items.map(item => {
             if(item.id >= 7 && item.id <=10){
                 return(
                     <div>
@@ -36,9 +37,10 @@ class Conifers extends Component{
     
                     </div>
                 )
-
+                    
+             
             }
-            
+            return this.state
         })
         return(
             

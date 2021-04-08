@@ -15,7 +15,7 @@ class BLE extends Component{
         console.log('clicked');
     }
     render(){
-        let itemList = this.props.items.forEach(item => {
+        let itemList = this.props.items.map(item => {
             if(item.id >= 4 && item.id <=6){
                 return(
                     <div>
@@ -37,8 +37,8 @@ class BLE extends Component{
                     </div>
                 )
 
-            }
-            
+            } 
+            return this.state
         })
         return(
             
