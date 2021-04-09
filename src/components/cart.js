@@ -18,12 +18,19 @@ class Cart extends Component{
         this.props.removeItem(id);
         console.log('clicked');
     }
+
     handleAddQuantity = (id) => {
         this.props.addQuantity(id);
     }
+
     handleSubtractQuantity = (id) => {
         this.props.subtractQuantity(id);
     }
+
+    componentDidUpdate(prevProps){
+        alert('Are you sure you want to remove/edit this item?');
+    }
+
     render(){
         let addedItems = 
         this.props.items.map(item =>{
@@ -69,6 +76,7 @@ class Cart extends Component{
                    </Row> 
                 </ul>  
                 <h3 className='total'>Total:${this.props.total}</h3>
+                <Link to='/checkout'><Button className='checkoutButton'>Checkout</Button></Link>
             </Container>
         )
     }

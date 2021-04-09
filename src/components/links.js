@@ -8,6 +8,7 @@ import Contact from '../components/contact';
 import Conifers from '../components/conifers_pines';
 import BLE from '../components/broadleafevergreen';
 import Deciduous from '../components/deciduous';
+import Checkout from '../components/checkout';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -34,7 +35,6 @@ class Navagation extends Component{
                             <NavLink to='/conifers' ><NavDropdown.Item href='/conifers' >Conifers and Pines</NavDropdown.Item></NavLink>
                         </NavDropdown>
                         <NavLink to='/cart' ><Nav.Link href='/cart'>Cart</Nav.Link></NavLink>
-                        <NavLink to='/contact'><Nav.Link href='/contact' >Contact</Nav.Link></NavLink>
                         <NavLink to='/aboutus'><Nav.Link href='/aboutus' >About Us</Nav.Link></NavLink>
                     </Nav>
                     </Navbar.Collapse>
@@ -48,6 +48,7 @@ class Navagation extends Component{
                                     <Route path='/conifers' component={Conifers}></Route>
                                     <Route path='/blevergreens' component={BLE}></Route>
                                     <Route path='/deciduous' component={Deciduous}></Route>
+                                    <Route path='/checkout' component={Checkout}></Route>
                                 </Switch>
 
             </div>

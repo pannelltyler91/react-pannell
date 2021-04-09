@@ -9,11 +9,9 @@ class Contact extends Component{
                 <h4>Contact Us</h4>
                 <p>Please contact us by phone, mail, or email.</p>
                 <div>
-                    <ul>
-                        <li>Email: <a href='mailto:tylerstinytrees@gmail.com subject=subject text' >tylerstinytrees@gmail.com</a></li>
-                        <li>Phone: 1-(800)-LIL-TREE</li>
-                        <li>Address: 1984 Miyagi Place, Reseda, CA 91335</li>
-                    </ul>
+                    
+                <p><b>Email:</b><a href='mailto:tylerstinytrees@gmail.com subject=subject text' > tylerstinytrees@gmail.com</a>  |  <b>Phone:</b> 1-(800)-LIL-TREE  |  <b>Address:</b> 1984 Miyagi Place, Reseda, CA 91335</p>
+                    
                 </div>
             </div>
         )

@@ -17,7 +17,7 @@ class App extends Component {
 
     return (
      
-      <Container>
+      <Container fluid>
         
         <div className="App">
           <div className='header'>
