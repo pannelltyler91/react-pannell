@@ -1,17 +1,26 @@
-.header{
-    background-color: #00203FFF;
-    color:#ADEFD1FF;
-    display:flex;
-    align-items: center;
-    
-    
+.fixed-top{
+  margin-bottom: 5px;
 }
+/* .heading{
+    z-index: 100;
+    position:relative;
+    color:#ADEFD1FF;
+    margin-left:550px;
+} */
+
 
 .App{
     background-color:#ADEFD1FF;
-    color:#00203FFF;
+  
+    
    
 }
 .row{
     background-color:#ADEFD1FF;
+}
+
+h2{
+    color:#00203FFF;
+    margin-left:500px;
+    margin-right:500px;
 }

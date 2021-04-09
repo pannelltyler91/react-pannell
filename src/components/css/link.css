@@ -1,6 +1,11 @@
 .navbar{
     background-color: #00203FFF;
     color:#101820FF;
+    display:flexbox;
+    justify-items: right;
+    align-items: flex-end;
+    margin-bottom:5px;
+    
 }
 
 .basic-nav-dropdown{
@@ -12,4 +17,7 @@ div.dropdown-menu.show{
 
 a.navbar{
     color:#101820FF;
+}
+.cart{
+margin-left:998px;
 }

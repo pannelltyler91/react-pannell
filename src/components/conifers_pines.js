@@ -45,7 +45,7 @@ class Conifers extends Component{
         return(
             
         <div className='container'>
-            <h1>Conifers</h1>
+            
             <div className='box'>
                 <Container>
                 <Row>

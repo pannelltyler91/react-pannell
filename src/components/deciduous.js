@@ -43,7 +43,7 @@ class Deciduous extends Component{
         return(
             
         <div className='container'>
-            <h1>Deciduous</h1>
+            
             <div className='box'>
                 <Container>
                 <Row>

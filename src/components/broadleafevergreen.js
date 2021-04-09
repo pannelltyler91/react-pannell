@@ -43,7 +43,7 @@ class BLE extends Component{
         return(
             
         <div className='container'>
-            <h1>BroadLeaf Evergreens</h1>
+            
             <div className='box'>
                 <Container>
                 <Row>
