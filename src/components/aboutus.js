@@ -1,4 +1,5 @@
 import {Component} from 'react';
+import Wishlist from '../components/wishlist';
 
 class Aboutus extends Component{
     constructor(props){
@@ -24,7 +25,7 @@ class Aboutus extends Component{
                 </div>
                 <div className='wishlist'>
                     <h5>Can't find a tree you like? Add on to our wishlist and we will do our best to update out stock!</h5>
-
+                    <Wishlist/>
                 </div>
             </div>
             
