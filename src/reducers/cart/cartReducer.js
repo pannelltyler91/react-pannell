@@ -8,7 +8,7 @@ import Merch7 from './images/juniper.jpg';
 import Merch8 from './images/spruce.jpg';
 import Merch9 from './images/cedar.jpg';
 import Merch10 from './images/hinokicypress.webp';
-import {ADD_TO_CART,removeItem,addQuantity,subtractQuantity} from '../actions/cartactions';
+import {ADD_TO_CART,removeItem,addQuantity,subtractQuantity,coupon} from '../actions/cartactions';
 
 const initState ={
     items:[
@@ -29,7 +29,8 @@ const initState ={
 
     ],
     addedItems:[],
-    total:0
+    total:0,
+    couponKey:'my_first_bonsai'
 }
 
 const cartReducer = (state = initState,action) => {
@@ -89,10 +90,19 @@ const cartReducer = (state = initState,action) => {
                 total:newTotal
             }
         }
-
+       
+    } else{
+    if (action.type === coupon){
+        let newTotal  = state.total - state.total * 0.10;
+        return{
+            ...state,
+            total:newTotal
+        }
+       
     } else{
         return state
     }
 }
 
+}
 export default cartReducer;

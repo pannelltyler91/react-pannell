@@ -6,7 +6,7 @@ class Aboutus extends Component{
         super(props);
         this.state = {
         iframe:"https://www.youtube.com/embed/jBhKKI3h52Y",
-        wishList:[]
+       
         }
     }
     render(){
@@ -21,7 +21,7 @@ class Aboutus extends Component{
                 </div>
                 <div className='tutorial'>
                     <h5>Getting Started in Bonsai? Please watch tutorial below on how to get started!(Bike repair not included)</h5>
-                    <iframe width="560" height="315" src={iframe} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src={iframe} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
                 <div className='wishlist'>
                     <h5>Can't find a tree you like? Add on to our wishlist and we will do our best to update out stock!</h5>

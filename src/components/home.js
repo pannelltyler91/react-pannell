@@ -14,6 +14,7 @@ class Home extends Component{
         this.props.addToCart(id);
         console.log('clicked');
     }
+    
     render(){
         let itemList = this.props.items.map(item => {
             

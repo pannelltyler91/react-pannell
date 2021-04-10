@@ -7,9 +7,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import {removeItem} from '../reducers/actions/cartactions.js';
-import {addQuantity} from '../reducers/actions/cartactions.js';
-import {subtractQuantity} from '../reducers/actions/cartactions.js';
+import {removeItem,addQuantity,subtractQuantity, coupon} from '../reducers/actions/cartactions.js';
+
 import './css/cart.css';
 
 class Cart extends Component{
@@ -26,6 +25,19 @@ class Cart extends Component{
     handleSubtractQuantity = (id) => {
         this.props.subtractQuantity(id);
     }
+    handleCoupon= (e)=>{
+      e.preventDefault();
+      console.log('clicked');
+      let discountCode = e.target.parentElement[0].value;
+      if( discountCode === 'my_first_bonsai'){
+        this.props.coupon(e);
+      }
+        
+    }
+
+    componentDidMount(){
+      alert('First time client? Use code my_first_bonsai for a 10% discount!');
+    }
 
     componentDidUpdate(prevProps){
         alert('Are you sure you want to remove/edit this item?');
@@ -35,10 +47,8 @@ class Cart extends Component{
         let addedItems = 
         this.props.items.map(item =>{
             return(
-          
                     <Col s={3} m={6}>
                     <Card className='card' style={{ width: '18rem' }}>
-
                     <div className='lineItem'>
                     <Card.Img className='merchPic' variant="top" src={item.image} />
                         <div className='lineBody'>
@@ -54,17 +64,11 @@ class Cart extends Component{
                         <div className='itemQuantityModify'>
                             <Link to='/cart'><Button className='plusOne' onClick={()=>{this.handleAddQuantity(item.id)}}>+</Button></Link>
                             <Link to='/cart'><Button className='minusOne' onClick={()=>(this.handleSubtractQuantity(item.id))}>-</Button></Link>
-
                         </div>
                         <Button className='removeItem' onClick = {() => {this.handleRemove(item.id)}}>Remove</Button>
-
                     </div>
                     </Card>
                     </Col>
-                   
-               
-                
-
             )
         })
         return(
@@ -75,6 +79,10 @@ class Cart extends Component{
                     {addedItems}
                    </Row> 
                 </ul>  
+                <form>
+                <input type='text' name='discount'></input>
+                <button type='submit'name='discountButton' onClick={this.handleCoupon}>Apply Discount Code</button>
+                </form>
                 <h3 className='total'>Total:${this.props.total}</h3>
                 <Link to='/checkout'><Button className='checkoutButton'>Checkout</Button></Link>
             </Container>
@@ -91,7 +99,8 @@ const mapDispatchToProps = (dispatch) =>{
     return{
         removeItem: (id) => {dispatch(removeItem(id))},
         addQuantity: (id) => {dispatch(addQuantity(id))},
-        subtractQuantity: (id) => {dispatch(subtractQuantity(id))}
+        subtractQuantity: (id) => {dispatch(subtractQuantity(id))},
+        coupon: (id) => {dispatch(coupon(id))}
     }
 }
 

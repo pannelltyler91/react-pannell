@@ -24,3 +24,9 @@ export const subtractQuantity =(id) =>{
         id
     }
 }
+export const coupon =(id) =>{
+    return{
+        type:coupon,
+        id
+    }
+}
