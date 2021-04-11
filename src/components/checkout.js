@@ -6,7 +6,7 @@ class Checkout extends Component{
             <div>
                 <h1>Checkout</h1>
                 <hr/>
-                <Cart/>
+            <h1>Thank you for your order!</h1>
                 <hr/>
                 
 

@@ -30,7 +30,7 @@ const initState ={
     ],
     addedItems:[],
     total:0,
-    couponKey:'my_first_bonsai'
+    coupons:[]
 }
 
 const cartReducer = (state = initState,action) => {
@@ -92,14 +92,16 @@ const cartReducer = (state = initState,action) => {
         }
        
     } else{
-    if (action.type === coupon){
+        if (action.type === coupon){
         let newTotal  = state.total - state.total * 0.10;
-        return{
-            ...state,
-            total:newTotal
-        }
-       
-    } else{
+        
+                    return{
+                        ...state,
+                        total:newTotal,
+                        
+                    }
+               
+    }else{
         return state
     }
 }

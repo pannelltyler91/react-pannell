@@ -27,10 +27,11 @@ class Cart extends Component{
     }
     handleCoupon= (e)=>{
       e.preventDefault();
-      console.log('clicked');
+      console.log(e);
       let discountCode = e.target.parentElement[0].value;
       if( discountCode === 'my_first_bonsai'){
         this.props.coupon(e);
+        discountCode = '';
       }
         
     }

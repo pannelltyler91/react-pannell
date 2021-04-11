@@ -27,6 +27,7 @@ export const subtractQuantity =(id) =>{
 export const coupon =(id) =>{
     return{
         type:coupon,
-        id
+        id,
+        executed:false
     }
 }
