@@ -24,3 +24,9 @@ h2{
     margin-left:500px;
     margin-right:500px;
 }
+
+@media all(min-width:500px){
+    .row{
+        background-color:pink;
+    }
+}

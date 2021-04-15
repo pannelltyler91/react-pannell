@@ -18,7 +18,7 @@ class Contact extends Component{
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href='/aboutus' >| Email: <a href="mailto:tylerstinytrees@gmail.com subject=subject text" >tylerstinytrees@gmail.com</a> |</Nav.Link>
+                        <Nav.Link href='/aboutus' >| Email: tylerstinytrees@gmail.com |</Nav.Link>
                         <Nav.Link href='/aboutus' >Phone: 1 (800)-LIL-TREE |</Nav.Link>
                         <Nav.Link href='/aboutus'> Address: 1984 Miyagi Place, Reseda, CA 91335 |</Nav.Link>
                         <Nav.Link href='/aboutus'><FaFacebook/></Nav.Link>

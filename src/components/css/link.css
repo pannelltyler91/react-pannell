@@ -1,9 +1,7 @@
 .navbar{
     background-color: #00203FFF;
     color:#101820FF;
-    display:flexbox;
-    justify-items: right;
-    align-items: flex-end;
+    display:flex;
     margin-bottom:5px;
     
 }
@@ -18,6 +16,10 @@ div.dropdown-menu.show{
 a.navbar{
     color:#101820FF;
 }
-.cart{
-margin-left:998px;
+
+
+@media (min-width:1395px){
+    h2{
+        font-size:10px;
+    }
 }

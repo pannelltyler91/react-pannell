@@ -19,7 +19,7 @@ class Conifers extends Component{
         let itemList = this.props.items.map(item => {
             if(item.id >= 7 && item.id <=10){
                 return(
-                    <div>
+                    <div >
                         <Col s={3}> 
                         <Card style={{ width: '18rem' }}>
                             <Card.Img className='merchPic' variant="top" src={item.image} />

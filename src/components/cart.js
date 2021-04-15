@@ -13,6 +13,7 @@ import './css/cart.css';
 
 class Cart extends Component{
 
+    
     handleRemove = (id) => {
         this.props.removeItem(id);
         console.log('clicked');
@@ -31,8 +32,8 @@ class Cart extends Component{
       let discountCode = e.target.parentElement[0].value;
       if( discountCode === 'my_first_bonsai'){
         this.props.coupon(e);
-        discountCode = '';
       }
+        discountCode = '';
         
     }
 

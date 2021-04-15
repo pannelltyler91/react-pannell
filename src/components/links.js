@@ -18,8 +18,6 @@ import './css/link.css';
 
 
 
-
-
 class Navagation extends Component{
     render(){
        
@@ -39,7 +37,7 @@ class Navagation extends Component{
 
                         </NavDropdown>
                         <NavLink to='/aboutus'><Nav.Link href='/aboutus' >| About Us |</Nav.Link></NavLink>
-                        <NavLink className='cart' to='/cart' ><Nav.Link href='/cart'>| <FaShoppingCart/> |</Nav.Link></NavLink>
+                        <NavLink className='cart' to='/cart' ><Nav.Link href='/cart'><FaShoppingCart/> </Nav.Link></NavLink>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>

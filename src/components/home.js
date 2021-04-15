@@ -19,7 +19,7 @@ class Home extends Component{
         let itemList = this.props.items.map(item => {
             
             return(
-                <div>
+                <div >
                     <Col s={3}> 
                     <Card style={{ width: '18rem' }} className='card'>
                         <Card.Img className='merchPic' variant="top" src={item.image} />
