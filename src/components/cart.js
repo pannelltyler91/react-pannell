@@ -21,6 +21,8 @@ class Cart extends Component{
 
     handleAddQuantity = (id) => {
         this.props.addQuantity(id);
+        console.log(this.props.coupons);
+       
     }
 
     handleSubtractQuantity = (id) => {
@@ -30,8 +32,9 @@ class Cart extends Component{
       e.preventDefault();
       console.log(e);
       let discountCode = e.target.parentElement[0].value;
+      
       if( discountCode === 'my_first_bonsai'){
-        this.props.coupon(e);
+        
       }
         discountCode = '';
         
@@ -39,10 +42,6 @@ class Cart extends Component{
 
     componentDidMount(){
       alert('First time client? Use code my_first_bonsai for a 10% discount!');
-    }
-
-    componentDidUpdate(prevProps){
-        alert('Are you sure you want to remove/edit this item?');
     }
 
     render(){
@@ -94,7 +93,9 @@ class Cart extends Component{
 const mapStateToProps = (state) =>{
     return{
         items:state.addedItems,
-        total:state.total
+        total:state.total,
+        cartCount:state.addedItems.length,
+        coupouns:state.coupons
     }
 }
 const mapDispatchToProps = (dispatch) =>{
