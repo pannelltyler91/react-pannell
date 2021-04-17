@@ -31,3 +31,9 @@ export const coupon =(id) =>{
         executed:false
     }
 }
+export const clearCart =(id) =>{
+    return{
+        type:clearCart,
+        id
+    }
+}
