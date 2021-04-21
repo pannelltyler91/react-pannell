@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import {removeItem,addQuantity,subtractQuantity, coupon, clearCart} from '../reducers/actions/cartactions.js';
+import {removeItem,addQuantity,subtractQuantity, coupon} from '../reducers/actions/cartactions.js';
 
 import './css/cart.css';
 
@@ -33,7 +33,7 @@ class Cart extends Component{
       console.log(e);
       let discountCode = e.target.parentElement[0].value;
       
-      if( discountCode === 'my_first_bonsai'){
+      if(discountCode === 'my_first_bonsai'){
           this.props.coupon(e);
         
       }
@@ -89,7 +89,7 @@ class Cart extends Component{
                 <button type='submit'name='discountButton' onClick={this.handleCoupon}>Apply Discount Code</button>
                 </form>
                 <h3 className='total'>Total:${this.props.total}</h3>
-                <Link to='/checkout'><Button className='checkoutButton' onClick={this._handleCheckout}>Checkout</Button></Link>
+                <Link to='/checkout'><Button className='checkoutButton' >Checkout</Button></Link>
             </Container>
         )
     }
@@ -108,7 +108,7 @@ const mapDispatchToProps = (dispatch) =>{
         addQuantity: (id) => {dispatch(addQuantity(id))},
         subtractQuantity: (id) => {dispatch(subtractQuantity(id))},
         coupon: (id) => {dispatch(coupon(id))},
-        cleartCart: (id) => {dispatch(clearCart(id))}
+       
     }
 }
 

@@ -8,7 +8,7 @@ import Merch7 from './images/juniper.jpg';
 import Merch8 from './images/spruce.jpg';
 import Merch9 from './images/cedar.jpg';
 import Merch10 from './images/hinokicypress.webp';
-import {ADD_TO_CART,removeItem,addQuantity,subtractQuantity,coupon,clearCart} from '../actions/cartactions';
+import {ADD_TO_CART,removeItem,addQuantity,subtractQuantity,coupon} from '../actions/cartactions';
 
 const initState ={
     items:[
@@ -93,26 +93,26 @@ const cartReducer = (state = initState,action) => {
        
     } 
     if (action.type === coupon){
+        let newCoupon = state.addedItems.find(coupon => action.id !== coupon.id);
         let newTotal  = state.total - state.total * 0.10;
+        if(newCoupon){
+
+            return{
+                ...state,
+                total:newTotal,
+                
+            }
+        }else{
+            return{
+            ...state,
+            total:state.total
+            }
+        }
         
-                    return{
-                        ...state,
-                        total:newTotal,
-                        
-                    }
     
                
     }
-    if(action.type === clearCart ){
-        let clearedCart  = [];
-        return{
-            ...state,
-            addeditems:clearedCart
-        }
-        
-    }else{
-        return state
-    }
+    
 }
 
 

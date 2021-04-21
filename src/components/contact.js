@@ -13,7 +13,7 @@ class Contact extends Component{
     render(){
         return(
             <div className='footer'>
-                <Navbar variant="dark" expand="lg" className='navbar'>
+                <Navbar variant="dark" sticky="bottom" expand="lg" className='navbar'>
                     <Navbar.Brand href="/">Contact Us</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
