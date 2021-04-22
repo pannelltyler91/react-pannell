@@ -28,6 +28,12 @@ export const coupon =(id) =>{
     return{
         type:coupon,
         id,
-       
+        executed:false
+    }
+}
+export const clearCart =(id) =>{
+    return{
+        type:clearCart,
+        id
     }
 }
